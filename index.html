@@ -44,18 +44,68 @@
     .menu-bg{position:absolute;inset:0;z-index:-5;background:url("img/d5819a07-85ee-45a7-ab44-1774b09b4f4f.png") center/cover no-repeat;opacity:.68}.menu-panel{width:min(850px,100%);margin-left:auto}.menu-row{display:grid;grid-template-columns:1fr auto;gap:22px;padding:25px 0;border-bottom:1px solid rgba(120,130,136,.22);font-family:"Inter","Helvetica Neue",Arial,sans-serif}.menu-row strong{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:rgba(31,37,41,.78)}.menu-row span{display:block;margin-top:9px;font-size:11px;letter-spacing:.08em;color:rgba(31,37,41,.52);line-height:1.8}.price{font-size:28px;color:rgba(31,37,41,.78);white-space:nowrap}
     .gallery{background:#f7f8f8}.gallery-bg{position:absolute;inset:0;z-index:-5;background:linear-gradient(180deg,rgba(255,255,255,.66),rgba(255,255,255,.9)),url("img/21d931b5-9792-4a61-8b0b-26bf331109b4.png") center/cover no-repeat}.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:44px}.gallery-card{position:relative;min-height:240px;border-radius:30px;overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.78);box-shadow:0 24px 80px rgba(95,105,112,.16)}.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) saturate(.72) contrast(.98) brightness(1.08);transform:scale(1.04)}.gallery-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.5));mix-blend-mode:screen}.wide{grid-column:span 7}.tall{grid-column:span 5;min-height:420px}.small{grid-column:span 4}.medium{grid-column:span 8}
     .reserve-bg{position:absolute;inset:0;z-index:-5;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.48)),url("img/f99d40e0-030c-4cc9-8910-0144953664da.png") center/cover no-repeat}.reserve{text-align:center}.reserve-inner{width:min(900px,100%);margin:auto}.access-note{position:relative;z-index:1;margin-top:34px;font:12px/2 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;color:rgba(31,37,41,.68)}.access-note a{color:#273035;text-decoration:none;border-bottom:1px solid rgba(39,48,53,.35)}.access-note strong{font-weight:400;letter-spacing:.18em}.divider-glass{position:absolute;left:0;right:0;bottom:-4px;height:140px;z-index:2;background:url("img/21d931b5-9792-4a61-8b0b-26bf331109b4.png") center/cover no-repeat;opacity:.34;mix-blend-mode:screen;pointer-events:none}.reveal{opacity:0;transform:translateY(34px);animation:reveal 1s ease forwards}.delay-1{animation-delay:.16s}.delay-2{animation-delay:.32s}@keyframes reveal{to{opacity:1;transform:translateY(0)}}
+    .fixed-contact{position:fixed;right:18px;bottom:18px;z-index:61;display:grid;gap:10px;width:min(220px,calc(100vw - 36px))}
+    .fixed-contact a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;text-decoration:none;color:#273035;background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 55px rgba(105,115,122,.24);backdrop-filter:blur(18px) saturate(150%);font:12px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:transform .45s ease,box-shadow .45s ease,background .45s ease}
+    .fixed-contact a:first-child{background:rgba(255,255,255,.82)}
+    .fixed-contact a:last-child{background:rgba(216,192,138,.26);box-shadow:inset 0 0 0 1px rgba(216,192,138,.2),0 18px 55px rgba(105,115,122,.2)}
+    .fixed-contact a:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(80,90,98,.22)}
+    .hero{min-height:100svh;padding:118px 7vw 74px;align-items:end;background:#1f2529;isolation:isolate}
+    .hero-bg{background-image:url("img/54e68c7e-dd38-4358-a48c-b867a91c8a95.png");background-position:center;background-size:cover;opacity:.86;filter:saturate(.78) contrast(1.02) brightness(.86);animation:heroDrift 24s ease-in-out infinite alternate}
+    .hero:before{background:radial-gradient(circle at 74% 24%,rgba(255,255,255,.38),transparent 25%),linear-gradient(90deg,rgba(13,17,20,.78),rgba(13,17,20,.34) 52%,rgba(13,17,20,.58)),linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.52));z-index:-2}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.32) 42.2%,transparent 43.4% 100%),url("img/83e8828d-4e81-4740-b475-55263c411567.png") center/cover no-repeat;opacity:.2;mix-blend-mode:screen;animation:heroWater 18s ease-in-out infinite alternate;pointer-events:none}
+    @keyframes heroDrift{from{transform:translateX(-1.4%) scale(1.12)}to{transform:translateX(1.4%) scale(1.16)}}
+    @keyframes heroWater{from{transform:translateY(-1.2%) scale(1.02);opacity:.16}to{transform:translateY(1.2%) scale(1.06);opacity:.28}}
+    .hero-layout{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(300px,.62fr);gap:min(7vw,76px);align-items:end}
+    .hero>.hero-layout:not(.hero-layout-clean){display:none}
+    .hero>.hero-copy{display:none}
+    .hero-copy{width:min(760px,100%);animation:floatCopy 7s ease-in-out infinite alternate}
+    .hero-kicker{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;color:rgba(255,255,255,.78);font:11px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}
+    .hero-kicker:before{content:"";width:42px;height:1px;background:rgba(216,192,138,.78);box-shadow:0 0 20px rgba(216,192,138,.48)}
+    .hero h1{font-size:clamp(48px,11vw,126px);line-height:.92;letter-spacing:-.04em;max-width:760px}
+    .hero h1 span{display:block;font-size:clamp(18px,4.8vw,44px);line-height:1.2;letter-spacing:.04em;margin-top:18px;color:rgba(255,255,255,.86)}
+    .hero .lead{max-width:610px;margin-top:28px;color:rgba(255,255,255,.82);font-size:13px;line-height:2.15;letter-spacing:.08em}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+    .hero-actions .btn{min-width:178px}
+    .hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px;max-width:640px}
+    .proof-chip{min-height:72px;padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(16px);font-family:"Inter","Helvetica Neue",Arial,sans-serif}
+    .proof-chip strong{display:block;color:rgba(255,255,255,.9);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+    .proof-chip span{display:block;margin-top:8px;color:rgba(255,255,255,.68);font-size:10px;line-height:1.6;letter-spacing:.06em}
+    .hero-panel{position:relative;align-self:stretch;min-height:470px;border-radius:32px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.34);box-shadow:0 34px 120px rgba(0,0,0,.26);backdrop-filter:blur(22px) saturate(142%)}
+    .hero-panel:before{content:"";position:absolute;inset:0;background:url("img/S__204398641_0.jpg") center/cover no-repeat;filter:grayscale(.1) saturate(.72) brightness(1.05);transform:scale(1.04)}
+    .hero-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.08) 34%,rgba(20,26,30,.62)),radial-gradient(circle at 18% 16%,rgba(255,255,255,.7),transparent 26%);mix-blend-mode:screen}
+    .hero-panel-content{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.78);box-shadow:0 18px 50px rgba(0,0,0,.14);backdrop-filter:blur(18px);font-family:"Inter","Helvetica Neue",Arial,sans-serif}
+    .hero-panel-content p{color:rgba(31,37,41,.7);font-size:11px;line-height:1.8;letter-spacing:.08em}
+    .hero-panel-content strong{display:block;margin-bottom:8px;color:#20272c;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+    .hero-scroll{position:absolute;left:7vw;bottom:24px;z-index:3;color:rgba(255,255,255,.64);font:10px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
     @media(max-width:840px){
       body{padding-bottom:82px}
       .mobile-contact-bar{position:fixed;left:14px;right:14px;bottom:14px;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 60px rgba(70,80,88,.24);backdrop-filter:blur(20px) saturate(160%)}
       .mobile-contact-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;text-decoration:none;color:#273035;background:rgba(255,255,255,.62);font:12px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(255,255,255,.62)}
       .mobile-contact-bar a:last-child{background:rgba(216,192,138,.26);box-shadow:inset 0 0 0 1px rgba(216,192,138,.22)}
+      .fixed-contact{display:none}
       .reserve-fixed{display:none}
-      .nav{padding:18px 20px}.nav-links{display:none}.section{padding:92px 20px}.grid-2{grid-template-columns:1fr;gap:34px}.salon-mosaic{grid-template-columns:1fr;grid-template-rows:360px 250px 250px;min-height:auto}.salon-shot:nth-child(1),.salon-shot:nth-child(3){grid-row:auto;grid-column:auto}.gallery-grid{grid-template-columns:1fr}.gallery-card,.wide,.tall,.small,.medium{grid-column:auto;min-height:270px}.menu-row{grid-template-columns:1fr}.reserve-fixed{left:18px;right:18px;display:none}.lead,.copy p{font-size:12px;line-height:2}h1{font-size:clamp(56px,17vw,96px)}h2{font-size:clamp(42px,14vw,78px)}}
+      .nav{padding:18px 20px}.nav-links{display:none}.section{padding:92px 20px}.grid-2{grid-template-columns:1fr;gap:34px}.salon-mosaic{grid-template-columns:1fr;grid-template-rows:360px 250px 250px;min-height:auto}.salon-shot:nth-child(1),.salon-shot:nth-child(3){grid-row:auto;grid-column:auto}.gallery-grid{grid-template-columns:1fr}.gallery-card,.wide,.tall,.small,.medium{grid-column:auto;min-height:270px}.menu-row{grid-template-columns:1fr}.reserve-fixed{left:18px;right:18px;display:none}.lead,.copy p{font-size:12px;line-height:2}h1{font-size:clamp(56px,17vw,96px)}h2{font-size:clamp(42px,14vw,78px)}
+      .hero{min-height:100svh;padding:102px 20px 118px;align-items:center}
+      .hero-layout{grid-template-columns:1fr;gap:26px}
+      .hero h1{font-size:clamp(48px,17vw,82px)}
+      .hero h1 span{font-size:clamp(18px,6vw,28px);margin-top:14px}
+      .hero .lead{margin-top:22px;font-size:12px;line-height:2}
+      .hero-actions{margin-top:26px}
+      .hero-actions .btn{width:100%;min-width:0}
+      .hero-proof{grid-template-columns:1fr;gap:8px;margin-top:22px}
+      .proof-chip{min-height:auto;padding:13px 14px}
+      .hero-panel{min-height:260px;border-radius:26px}
+      .hero-panel-content{padding:16px;border-radius:18px}
+      .hero-scroll{display:none}
+    }
   </style>
 </head>
 <body>
   <div class="noise"></div>
-  <a class="reserve-fixed" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
+  <div class="fixed-contact" aria-label="quick contact desktop">
+    <a href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
+    <a href="tel:09088659214">Call 090-8865-9214</a>
+  </div>
   <div class="mobile-contact-bar" aria-label="quick contact">
     <a href="tel:09088659214">TEL</a>
     <a href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE</a>
@@ -74,6 +124,53 @@
   <main class="site" id="top">
     <section class="section hero dark">
       <div class="hero-bg"></div>
+      <div class="hero-layout hero-layout-clean">
+        <div class="hero-copy reveal">
+          <div class="hero-kicker">Ebisu Private Body Salon</div>
+          <h1>TAKUMA<span>身体を読み、本来の動きを取り戻す。</span></h1>
+          <p class="lead">恵比寿の完全予約制整体サロン。筋肉・可動域・重心・姿勢を丁寧に観察し、その日の身体に合わせて施術を組み立てます。静かな個室で、癒しに寄せすぎない上質なボディメンテナンスを。</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
+            <a class="btn ghost" href="tel:09088659214">Call</a>
+            <a class="btn ghost" href="#concept">View Concept</a>
+          </div>
+          <div class="hero-proof" aria-label="salon features">
+            <div class="proof-chip"><strong>Private</strong><span>完全予約制の個別空間</span></div>
+            <div class="proof-chip"><strong>Observe</strong><span>姿勢・癖・動作を確認</span></div>
+            <div class="proof-chip"><strong>Custom</strong><span>状態に合わせた施術設計</span></div>
+          </div>
+        </div>
+        <div class="hero-panel reveal delay-1" aria-label="private treatment room">
+          <div class="hero-panel-content">
+            <strong>Ebisu / 5min</strong>
+            <p>東京都渋谷区恵比寿4丁目。JR恵比寿駅徒歩5分。月から土曜午後、日曜日対応。</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-layout">
+        <div class="hero-copy reveal">
+          <div class="hero-kicker">Ebisu Private Body Salon</div>
+          <h1>TAKUMA<span>身体を読み、本来の動きを取り戻す。</span></h1>
+          <p class="lead">恵比寿の完全予約制整体サロン。筋肉・可動域・重心・姿勢を丁寧に観察し、その日の身体に合わせて施術を組み立てます。静かな個室で、癒しに寄せすぎない上質なボディメンテナンスを。</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
+            <a class="btn ghost" href="tel:09088659214">Call</a>
+            <a class="btn ghost" href="#concept">View Concept</a>
+          </div>
+          <div class="hero-proof" aria-label="salon features">
+            <div class="proof-chip"><strong>Private</strong><span>完全予約制の個別空間</span></div>
+            <div class="proof-chip"><strong>Observe</strong><span>姿勢・癖・動作を確認</span></div>
+            <div class="proof-chip"><strong>Custom</strong><span>状態に合わせた施術設計</span></div>
+          </div>
+        </div>
+        <div class="hero-panel reveal delay-1" aria-label="private treatment room">
+          <div class="hero-panel-content">
+            <strong>Ebisu / 5min</strong>
+            <p>東京都渋谷区恵比寿4丁目。JR恵比寿駅徒歩5分。月から土曜午後、日曜日対応。</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">Scroll</div>
       <div class="hero-copy reveal">
         <div class="eyebrow">Ebisu Private Body Salon</div>
         <h1>TAKUMA<br>Body<br>Care</h1>

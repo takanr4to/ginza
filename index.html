@@ -3,100 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TAKUMA | Body Maintenance Salon</title>
+  <meta name="description" content="恵比寿駅徒歩5分の完全予約制整体サロン TAKUMA-仮-。筋肉・可動域・重心・姿勢を観察し、その日の身体に合わせたオーダーメイド施術を行います。" />
+  <title>TAKUMA-仮- | 恵比寿 完全予約制整体サロン</title>
+  <link rel="preload" as="image" href="img/optimized/hero-bg.jpg" />
+  <link rel="preload" as="image" href="img/optimized/treatment-1.jpg" />
   <style>
     :root{
-      --white:#fff;--mist:#f7f8f8;--pearl:#eef1f2;--silver:#cfd5d8;--ink:#1f2529;--soft:rgba(31,37,41,.66);--gold:#d8c08a;--shadow:0 28px 90px rgba(95,105,112,.18)
+      --ink:#20272c;
+      --charcoal:#14191d;
+      --muted:#68737b;
+      --line:rgba(142,154,162,.24);
+      --white:#fff;
+      --mist:#f7f8f8;
+      --glass:rgba(255,255,255,.68);
+      --gold:#cbb57d;
+      --shadow:0 28px 90px rgba(39,48,53,.18);
+      --font-serif:"Cormorant Garamond","Times New Roman","Yu Mincho","Hiragino Mincho ProN",serif;
+      --font-sans:"Inter","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{color:var(--ink);background:#f8f9f9;font-family:"Cormorant Garamond","Times New Roman","Yu Mincho","Hiragino Mincho ProN",serif;overflow-x:hidden}
-    body:before{content:"";position:fixed;inset:0;z-index:-5;background:linear-gradient(180deg,rgba(255,255,255,.58),rgba(248,249,249,.92) 45%,rgba(255,255,255,.76)),url("img/8973f466-35d3-421e-8ec4-ee7a407ee97c.png") center/cover no-repeat;opacity:.85}
-    body:after{content:"";position:fixed;inset:-10%;z-index:-4;background:url("img/83e8828d-4e81-4740-b475-55263c411567.png") center/cover no-repeat;opacity:.18;mix-blend-mode:screen;filter:blur(1px);animation:water 20s ease-in-out infinite alternate;pointer-events:none}
+    body{min-width:320px;color:var(--ink);background:#f8f9f9;font-family:var(--font-serif);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-5;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(248,249,249,.94)),url("img/optimized/page-bg.jpg") center/cover no-repeat;opacity:.9}
+    body:after{content:"";position:fixed;inset:-12%;z-index:-4;background:url("img/optimized/water-overlay.jpg") center/cover no-repeat;opacity:.16;mix-blend-mode:screen;animation:water 22s ease-in-out infinite alternate;pointer-events:none}
     @keyframes water{from{transform:translate(-1%,-1%) scale(1.04)}to{transform:translate(1%,1%) scale(1.08)}}
-    .noise{position:fixed;inset:0;z-index:20;pointer-events:none;opacity:.03;background-image:radial-gradient(rgba(0,0,0,.25) .7px,transparent .7px);background-size:3px 3px;mix-blend-mode:multiply}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:22px 7vw;color:rgba(255,255,255,.82);font:11px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;mix-blend-mode:difference}.nav a{color:inherit;text-decoration:none}.nav-links{display:flex;gap:24px}
-    .reserve-fixed{position:fixed;right:18px;bottom:18px;z-index:31;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;color:#273035;text-decoration:none;font:12px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.78);box-shadow:0 18px 55px rgba(105,115,122,.24);backdrop-filter:blur(18px) saturate(150%)}
-    .reserve-fixed:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px rgba(216,192,138,.9)}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .noise{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.025;background-image:radial-gradient(rgba(0,0,0,.28) .7px,transparent .7px);background-size:3px 3px}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;color:rgba(255,255,255,.86);font:11px/1 var(--font-sans);letter-spacing:.18em;text-transform:uppercase;mix-blend-mode:difference}
+    .nav a{text-decoration:none}.nav-links{display:flex;gap:24px}
+    .fixed-contact{position:fixed;right:18px;bottom:18px;z-index:80;display:grid;gap:10px;width:min(230px,calc(100vw - 36px))}
+    .fixed-contact a,.mobile-contact-bar a,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;text-decoration:none;font:12px/1 var(--font-sans);letter-spacing:.15em;text-transform:uppercase;transition:transform .35s ease,box-shadow .35s ease,background .35s ease}
+    .fixed-contact a{background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.84);box-shadow:0 18px 55px rgba(70,80,88,.22);backdrop-filter:blur(18px) saturate(150%)}
+    .fixed-contact a:last-child{background:rgba(203,181,125,.28)}
+    .fixed-contact a:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(70,80,88,.22)}
     .mobile-contact-bar{display:none}
-    .reserve-fixed,.btn,.glass-card,.panel,.salon-shot,.gallery-card{transition:transform .45s ease,box-shadow .45s ease,background .45s ease}
-    .btn:hover,.reserve-fixed:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(80,90,98,.22)}
-    .glass-card:hover,.panel:hover{transform:translateY(-4px);box-shadow:0 34px 110px rgba(95,105,112,.22)}
-    .salon-shot:hover img,.gallery-card:hover img{transform:scale(1.09)}
-    .salon-shot img,.gallery-card img{transition:transform 1.2s ease,filter 1.2s ease}
-    .section{animation:sectionBreath 12s ease-in-out infinite alternate}
-    @keyframes sectionBreath{from{background-position:center top}to{background-position:center bottom}}
-    .hero-copy{animation:floatCopy 7s ease-in-out infinite alternate}
-    @keyframes floatCopy{from{transform:translateY(0)}to{transform:translateY(-12px)}}
-    .material-orbit{animation:orbitGlow 12s ease-in-out infinite alternate}
-    @keyframes orbitGlow{from{transform:translate(0,0) scale(1);opacity:.42}to{transform:translate(-18px,-14px) scale(1.04);opacity:.62}}
-    .divider-glass{animation:glassFlow 10s ease-in-out infinite alternate}
-    @keyframes glassFlow{from{transform:translateX(-1.5%);opacity:.24}to{transform:translateX(1.5%);opacity:.42}}
-    .section{min-height:100svh;position:relative;display:grid;align-items:center;padding:118px 7vw;overflow:hidden}.section:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:28vh;background:linear-gradient(180deg,transparent,rgba(255,255,255,.9));z-index:-1}
-    .hero{color:white;background:#22282d}.hero-bg{position:absolute;inset:0;z-index:-5;background:url("img/54e68c7e-dd38-4358-a48c-b867a91c8a95.png") center/cover no-repeat;transform:scale(1.14);animation:heroMove 20s linear infinite alternate;filter:saturate(.88) contrast(.96)}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 58%,rgba(255,255,255,.24),transparent 36%),linear-gradient(90deg,rgba(12,16,20,.6),rgba(12,16,20,.12) 48%,rgba(12,16,20,.42)),linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.42))}@keyframes heroMove{from{transform:translateX(-1.8%) scale(1.14)}to{transform:translateX(1.8%) scale(1.14)}}
-    .hero-copy{width:min(650px,92vw)}.eyebrow{font:11px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:24px}.light .eyebrow{color:rgba(85,95,102,.58)}h1,h2{font-weight:400;line-height:.9;letter-spacing:-.045em}h1{font-size:clamp(58px,13vw,154px);color:rgba(255,255,255,.94);text-shadow:0 20px 80px rgba(0,0,0,.2)}h2{font-size:clamp(46px,10vw,116px);color:rgba(31,37,41,.82)}.dark h2{color:rgba(255,255,255,.9)}.lead,.copy p{margin-top:28px;max-width:470px;font:13px/2.1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;color:rgba(255,255,255,.78)}.light .lead,.light .copy p{color:var(--soft)}
-    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;font:11px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#273035;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.72);box-shadow:0 20px 60px rgba(51,58,64,.16);backdrop-filter:blur(18px)}.btn.ghost{color:white;background:rgba(255,255,255,.12)}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:min(7vw,86px);align-items:center}.glass-card,.panel{position:relative;padding:clamp(30px,5vw,62px);border-radius:36px;background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.34));border:1px solid rgba(255,255,255,.84);box-shadow:var(--shadow);backdrop-filter:blur(24px) saturate(155%);overflow:hidden}.glass-card:before,.panel:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.82),transparent 38%,rgba(216,192,138,.14));pointer-events:none}.copy{position:relative;z-index:1}
-    .concept-bg{position:absolute;inset:0;z-index:-5;background:url("img/dc1a9b4d-f1b9-4628-ad6e-d7568c6afae0.png") center/cover no-repeat;opacity:.52}.material-orbit{position:absolute;inset:auto -8vw -8vh auto;width:min(58vw,720px);aspect-ratio:1.4;background:url("img/f99d40e0-030c-4cc9-8910-0144953664da.png") center/cover no-repeat;opacity:.52;filter:blur(.2px);border-radius:46px;z-index:-2}
-    .salon-mosaic{display:grid;grid-template-columns:1.05fr .85fr;grid-template-rows:260px 190px 210px;gap:14px;min-height:680px}.salon-shot{position:relative;overflow:hidden;border-radius:30px;border:1px solid rgba(255,255,255,.7);box-shadow:0 24px 80px rgba(78,88,95,.18);background:#fff}.salon-shot img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.18) saturate(.72) contrast(.98) brightness(1.08);transform:scale(1.05)}.salon-shot:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.52)),radial-gradient(circle at 20% 10%,rgba(255,255,255,.58),transparent 34%);mix-blend-mode:screen}.salon-shot:nth-child(1){grid-row:1/3}.salon-shot:nth-child(3){grid-column:1/3}.salon-shot:nth-child(4){display:none}
-    .room{min-height:118svh;color:white;background:#20262b}.room-bg{position:absolute;inset:0;z-index:-5;background:linear-gradient(90deg,rgba(12,16,20,.74),rgba(12,16,20,.16) 54%,rgba(12,16,20,.42)),url("img/S__204398630_0.jpg") center/cover no-repeat;filter:grayscale(.1) saturate(.75) brightness(.98);transform:scale(1.04)}.room-copy{width:min(540px,92vw);padding:clamp(30px,5vw,60px);border-radius:38px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.32);box-shadow:0 30px 110px rgba(0,0,0,.2);backdrop-filter:blur(18px)}
-    .technique{color:white;background:#20252a}.technique-bg{position:absolute;inset:0;z-index:-5;background:linear-gradient(90deg,rgba(15,19,23,.82),rgba(15,19,23,.38)),url("img/e31ad726-2483-413f-bde0-380bac9e6c7b.png") center/cover no-repeat}.float-list{display:grid;gap:12px;margin-top:30px;font-family:"Inter","Helvetica Neue",Arial,sans-serif}.float-item{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.74)}
-    .menu-bg{position:absolute;inset:0;z-index:-5;background:url("img/d5819a07-85ee-45a7-ab44-1774b09b4f4f.png") center/cover no-repeat;opacity:.68}.menu-panel{width:min(850px,100%);margin-left:auto}.menu-row{display:grid;grid-template-columns:1fr auto;gap:22px;padding:25px 0;border-bottom:1px solid rgba(120,130,136,.22);font-family:"Inter","Helvetica Neue",Arial,sans-serif}.menu-row strong{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:rgba(31,37,41,.78)}.menu-row span{display:block;margin-top:9px;font-size:11px;letter-spacing:.08em;color:rgba(31,37,41,.52);line-height:1.8}.price{font-size:28px;color:rgba(31,37,41,.78);white-space:nowrap}
-    .gallery{background:#f7f8f8}.gallery-bg{position:absolute;inset:0;z-index:-5;background:linear-gradient(180deg,rgba(255,255,255,.66),rgba(255,255,255,.9)),url("img/21d931b5-9792-4a61-8b0b-26bf331109b4.png") center/cover no-repeat}.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:44px}.gallery-card{position:relative;min-height:240px;border-radius:30px;overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.78);box-shadow:0 24px 80px rgba(95,105,112,.16)}.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.16) saturate(.72) contrast(.98) brightness(1.08);transform:scale(1.04)}.gallery-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.5));mix-blend-mode:screen}.wide{grid-column:span 7}.tall{grid-column:span 5;min-height:420px}.small{grid-column:span 4}.medium{grid-column:span 8}
-    .reserve-bg{position:absolute;inset:0;z-index:-5;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.48)),url("img/f99d40e0-030c-4cc9-8910-0144953664da.png") center/cover no-repeat}.reserve{text-align:center}.reserve-inner{width:min(900px,100%);margin:auto}.access-note{position:relative;z-index:1;margin-top:34px;font:12px/2 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;color:rgba(31,37,41,.68)}.access-note a{color:#273035;text-decoration:none;border-bottom:1px solid rgba(39,48,53,.35)}.access-note strong{font-weight:400;letter-spacing:.18em}.divider-glass{position:absolute;left:0;right:0;bottom:-4px;height:140px;z-index:2;background:url("img/21d931b5-9792-4a61-8b0b-26bf331109b4.png") center/cover no-repeat;opacity:.34;mix-blend-mode:screen;pointer-events:none}.reveal{opacity:0;transform:translateY(34px);animation:reveal 1s ease forwards}.delay-1{animation-delay:.16s}.delay-2{animation-delay:.32s}@keyframes reveal{to{opacity:1;transform:translateY(0)}}
-    .fixed-contact{position:fixed;right:18px;bottom:18px;z-index:61;display:grid;gap:10px;width:min(220px,calc(100vw - 36px))}
-    .fixed-contact a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;text-decoration:none;color:#273035;background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 55px rgba(105,115,122,.24);backdrop-filter:blur(18px) saturate(150%);font:12px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:transform .45s ease,box-shadow .45s ease,background .45s ease}
-    .fixed-contact a:first-child{background:rgba(255,255,255,.82)}
-    .fixed-contact a:last-child{background:rgba(216,192,138,.26);box-shadow:inset 0 0 0 1px rgba(216,192,138,.2),0 18px 55px rgba(105,115,122,.2)}
-    .fixed-contact a:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(80,90,98,.22)}
-    .hero{min-height:100svh;padding:118px 7vw 74px;align-items:end;background:#1f2529;isolation:isolate}
-    .hero-bg{background-image:url("img/54e68c7e-dd38-4358-a48c-b867a91c8a95.png");background-position:center;background-size:cover;opacity:.86;filter:saturate(.78) contrast(1.02) brightness(.86);animation:heroDrift 24s ease-in-out infinite alternate}
-    .hero:before{background:radial-gradient(circle at 74% 24%,rgba(255,255,255,.38),transparent 25%),linear-gradient(90deg,rgba(13,17,20,.78),rgba(13,17,20,.34) 52%,rgba(13,17,20,.58)),linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.52));z-index:-2}
-    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.32) 42.2%,transparent 43.4% 100%),url("img/83e8828d-4e81-4740-b475-55263c411567.png") center/cover no-repeat;opacity:.2;mix-blend-mode:screen;animation:heroWater 18s ease-in-out infinite alternate;pointer-events:none}
-    @keyframes heroDrift{from{transform:translateX(-1.4%) scale(1.12)}to{transform:translateX(1.4%) scale(1.16)}}
-    @keyframes heroWater{from{transform:translateY(-1.2%) scale(1.02);opacity:.16}to{transform:translateY(1.2%) scale(1.06);opacity:.28}}
-    .hero-layout{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(300px,.62fr);gap:min(7vw,76px);align-items:end}
-    .hero>.hero-layout:not(.hero-layout-clean){display:none}
-    .hero>.hero-copy{display:none}
-    .hero-copy{width:min(760px,100%);animation:floatCopy 7s ease-in-out infinite alternate}
-    .hero-kicker{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;color:rgba(255,255,255,.78);font:11px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}
-    .hero-kicker:before{content:"";width:42px;height:1px;background:rgba(216,192,138,.78);box-shadow:0 0 20px rgba(216,192,138,.48)}
-    .hero h1{font-size:clamp(48px,11vw,126px);line-height:.92;letter-spacing:-.04em;max-width:760px}
-    .hero h1 span{display:block;font-size:clamp(18px,4.8vw,44px);line-height:1.2;letter-spacing:.04em;margin-top:18px;color:rgba(255,255,255,.86)}
-    .hero .lead{max-width:610px;margin-top:28px;color:rgba(255,255,255,.82);font-size:13px;line-height:2.15;letter-spacing:.08em}
+    .section{position:relative;overflow:hidden;padding:112px 6vw}
+    .section-inner{position:relative;z-index:2;width:min(1180px,100%);margin:auto}
+    .eyebrow{font:11px/1 var(--font-sans);letter-spacing:.28em;text-transform:uppercase;color:rgba(105,116,124,.72);margin-bottom:18px}
+    h1,h2,h3{font-weight:400;letter-spacing:-.035em}
+    h1{font-size:clamp(50px,10vw,126px);line-height:.9;color:rgba(255,255,255,.94);text-shadow:0 22px 90px rgba(0,0,0,.3)}
+    h2{font-size:clamp(42px,8vw,96px);line-height:.94;color:rgba(32,39,44,.86)}
+    h3{font-size:clamp(25px,4vw,42px);line-height:1.1;color:rgba(32,39,44,.84)}
+    p{font:13px/2 var(--font-sans);letter-spacing:.06em;color:rgba(32,39,44,.68)}
+    .lead{max-width:620px;margin-top:26px;color:rgba(255,255,255,.82)}
+    .btn{background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 55px rgba(36,44,50,.18);color:#273035;backdrop-filter:blur(18px)}
+    .btn.primary{background:rgba(255,255,255,.88)}
+    .btn.gold{background:rgba(203,181,125,.28);box-shadow:inset 0 0 0 1px rgba(203,181,125,.18),0 18px 55px rgba(36,44,50,.16)}
+    .btn.dark{color:#fff;background:rgba(20,25,29,.84);border-color:rgba(255,255,255,.18)}
+    .glass{background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.38));border:1px solid rgba(255,255,255,.82);box-shadow:var(--shadow);backdrop-filter:blur(22px) saturate(145%)}
+
+    .hero{min-height:100svh;padding:110px 6vw 54px;display:grid;align-items:end;color:white;background:#151a1e;isolation:isolate}
+    .hero-bg{position:absolute;inset:0;z-index:-5;background:url("img/optimized/hero-bg.jpg") center/cover no-repeat;filter:saturate(.82) contrast(1.04) brightness(.76);transform:scale(1.08);animation:heroMove 24s ease-in-out infinite alternate}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-3;background:radial-gradient(circle at 72% 22%,rgba(255,255,255,.36),transparent 24%),linear-gradient(90deg,rgba(12,16,20,.82),rgba(12,16,20,.34) 54%,rgba(12,16,20,.58)),linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.58))}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.26) 42.2%,transparent 43.2% 100%),url("img/optimized/water-overlay.jpg") center/cover no-repeat;opacity:.22;mix-blend-mode:screen;animation:heroWater 18s ease-in-out infinite alternate}
+    @keyframes heroMove{from{transform:translateX(-1.2%) scale(1.08)}to{transform:translateX(1.2%) scale(1.12)}}
+    @keyframes heroWater{from{transform:translateY(-1%) scale(1.02)}to{transform:translateY(1%) scale(1.05)}}
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(310px,.62fr);gap:min(7vw,76px);align-items:end;width:min(1180px,100%);margin:auto}
+    .hero-kicker{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;color:rgba(255,255,255,.78);font:11px/1 var(--font-sans);letter-spacing:.24em;text-transform:uppercase}
+    .hero-kicker:before{content:"";width:42px;height:1px;background:rgba(203,181,125,.78);box-shadow:0 0 20px rgba(203,181,125,.48)}
+    .hero h1 span{display:block;margin-top:18px;font-size:clamp(19px,4.6vw,43px);line-height:1.22;letter-spacing:.04em;color:rgba(255,255,255,.88)}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-    .hero-actions .btn{min-width:178px}
-    .hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px;max-width:640px}
-    .proof-chip{min-height:72px;padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(16px);font-family:"Inter","Helvetica Neue",Arial,sans-serif}
+    .hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px;max-width:650px}
+    .proof-chip{min-height:74px;padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(16px);font-family:var(--font-sans)}
     .proof-chip strong{display:block;color:rgba(255,255,255,.9);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
     .proof-chip span{display:block;margin-top:8px;color:rgba(255,255,255,.68);font-size:10px;line-height:1.6;letter-spacing:.06em}
-    .hero-panel{position:relative;align-self:stretch;min-height:470px;border-radius:32px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.34);box-shadow:0 34px 120px rgba(0,0,0,.26);backdrop-filter:blur(22px) saturate(142%)}
-    .hero-panel:before{content:"";position:absolute;inset:0;background:url("img/S__204398641_0.jpg") center/cover no-repeat;filter:grayscale(.1) saturate(.72) brightness(1.05);transform:scale(1.04)}
-    .hero-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.08) 34%,rgba(20,26,30,.62)),radial-gradient(circle at 18% 16%,rgba(255,255,255,.7),transparent 26%);mix-blend-mode:screen}
-    .hero-panel-content{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.78);box-shadow:0 18px 50px rgba(0,0,0,.14);backdrop-filter:blur(18px);font-family:"Inter","Helvetica Neue",Arial,sans-serif}
-    .hero-panel-content p{color:rgba(31,37,41,.7);font-size:11px;line-height:1.8;letter-spacing:.08em}
-    .hero-panel-content strong{display:block;margin-bottom:8px;color:#20272c;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
-    .hero-scroll{position:absolute;left:7vw;bottom:24px;z-index:3;color:rgba(255,255,255,.64);font:10px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
-    @media(max-width:840px){
+    .hero-visual{display:grid;gap:14px}
+    .treatment-card{position:relative;min-height:470px;border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.34);box-shadow:0 34px 120px rgba(0,0,0,.28);background:#1d2328}
+    .treatment-card img{width:100%;height:100%;min-height:470px;object-fit:cover;filter:grayscale(.12) saturate(.78) contrast(1.02) brightness(.98);transform:scale(1.02)}
+    .treatment-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.04) 34%,rgba(17,22,26,.72)),radial-gradient(circle at 18% 16%,rgba(255,255,255,.55),transparent 25%);mix-blend-mode:screen}
+    .hero-note{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;padding:18px;border-radius:22px;background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 50px rgba(0,0,0,.14);backdrop-filter:blur(18px);font-family:var(--font-sans)}
+    .hero-note strong{display:block;margin-bottom:8px;color:#20272c;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+    .hero-note p{font-size:11px;line-height:1.8;color:rgba(32,39,44,.68)}
+    .micro-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .micro-gallery figure{height:138px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.3);box-shadow:0 20px 70px rgba(0,0,0,.18)}
+    .micro-gallery img{width:100%;height:100%;object-fit:cover;filter:grayscale(.1) saturate(.82) brightness(1.04)}
+    .hero-scroll{position:absolute;left:6vw;bottom:24px;z-index:3;color:rgba(255,255,255,.64);font:10px/1 var(--font-sans);letter-spacing:.2em;text-transform:uppercase}
+
+    .conversion-strip{padding:22px 6vw;background:rgba(20,25,29,.96);color:white}
+    .conversion-strip .section-inner{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+    .conversion-strip p{color:rgba(255,255,255,.74);margin-top:4px}
+    .conversion-strip strong{font:13px/1.7 var(--font-sans);letter-spacing:.1em;font-weight:400}
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:min(7vw,86px);align-items:center}
+    .copy-block{position:relative;z-index:1}
+    .copy-block p{margin-top:24px;max-width:560px}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+    .feature{padding:24px;border-radius:22px}
+    .feature span{display:block;margin-bottom:12px;font:11px/1 var(--font-sans);letter-spacing:.2em;text-transform:uppercase;color:rgba(32,39,44,.48)}
+    .feature p{margin-top:10px;font-size:12px;line-height:1.8}
+
+    .concept{background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(247,248,248,.86))}
+    .concept:before{content:"";position:absolute;inset:0;z-index:0;background:url("img/optimized/concept-bg.jpg") center/cover no-repeat;opacity:.35}
+    .photo-mosaic{display:grid;grid-template-columns:1.05fr .85fr;grid-template-rows:245px 190px 205px;gap:14px}
+    .photo-mosaic figure{position:relative;overflow:hidden;border-radius:26px;border:1px solid rgba(255,255,255,.76);box-shadow:0 24px 80px rgba(78,88,95,.16);background:#fff}
+    .photo-mosaic figure:first-child{grid-row:1/3}.photo-mosaic figure:nth-child(3){grid-column:1/3}
+    .photo-mosaic img{width:100%;height:100%;object-fit:cover;filter:grayscale(.14) saturate(.78) brightness(1.08);transform:scale(1.03)}
+    .photo-mosaic figure:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.5));mix-blend-mode:screen}
+
+    .dark-section{color:white;background:#171c20}
+    .dark-section:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(15,19,23,.84),rgba(15,19,23,.44)),url("img/optimized/technique-bg.jpg") center/cover no-repeat;opacity:.92}
+    .dark-section h2{color:rgba(255,255,255,.9)}
+    .dark-section p{color:rgba(255,255,255,.72)}
+    .method-list{display:grid;gap:12px}
+    .method{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.18);font-family:var(--font-sans)}
+    .method b{color:rgba(203,181,125,.9);font-weight:400;letter-spacing:.16em}
+    .method strong{display:block;margin-bottom:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+    .method p{font-size:12px;line-height:1.8}
+
+    .menu{background:#f8f9f9}
+    .menu:before{content:"";position:absolute;inset:0;background:url("img/optimized/menu-bg.jpg") center/cover no-repeat;opacity:.34}
+    .menu-card{padding:clamp(30px,5vw,58px);border-radius:32px}
+    .menu-row{display:grid;grid-template-columns:1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);font-family:var(--font-sans)}
+    .menu-row strong{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:rgba(32,39,44,.8)}
+    .menu-row span{display:block;margin-top:8px;font-size:12px;line-height:1.8;color:rgba(32,39,44,.58)}
+    .price{font-family:var(--font-serif);font-size:30px;white-space:nowrap;color:rgba(32,39,44,.74)}
+
+    .flow-grid,.faq-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+    .flow-card,.faq-card{padding:24px;border-radius:22px}
+    .flow-card b{font:12px/1 var(--font-sans);letter-spacing:.18em;color:rgba(203,181,125,.95)}
+    .flow-card strong,.faq-card strong{display:block;margin:14px 0 10px;font:13px/1.6 var(--font-sans);letter-spacing:.12em;font-weight:500}
+    .flow-card p,.faq-card p{font-size:12px;line-height:1.8}
+
+    .reserve{min-height:86svh;text-align:center;display:grid;align-items:center;background:#f7f8f8}
+    .reserve:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.5)),url("img/optimized/material.jpg") center/cover no-repeat;opacity:.92}
+    .reserve-panel{width:min(920px,100%);margin:auto;padding:clamp(34px,6vw,70px);border-radius:36px}
+    .reserve-panel .lead-dark{margin:26px auto 0;max-width:640px;color:rgba(32,39,44,.68)}
+    .access-note{margin-top:34px;font:12px/2 var(--font-sans);letter-spacing:.08em;color:rgba(32,39,44,.66)}
+    .access-note a{text-decoration:none;border-bottom:1px solid rgba(32,39,44,.3)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .85s ease,transform .85s ease}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:860px){
       body{padding-bottom:82px}
-      .mobile-contact-bar{position:fixed;left:14px;right:14px;bottom:14px;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 60px rgba(70,80,88,.24);backdrop-filter:blur(20px) saturate(160%)}
-      .mobile-contact-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;text-decoration:none;color:#273035;background:rgba(255,255,255,.62);font:12px/1 "Inter","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(255,255,255,.62)}
-      .mobile-contact-bar a:last-child{background:rgba(216,192,138,.26);box-shadow:inset 0 0 0 1px rgba(216,192,138,.22)}
+      .nav{padding:18px 20px}.nav-links{display:none}
       .fixed-contact{display:none}
-      .reserve-fixed{display:none}
-      .nav{padding:18px 20px}.nav-links{display:none}.section{padding:92px 20px}.grid-2{grid-template-columns:1fr;gap:34px}.salon-mosaic{grid-template-columns:1fr;grid-template-rows:360px 250px 250px;min-height:auto}.salon-shot:nth-child(1),.salon-shot:nth-child(3){grid-row:auto;grid-column:auto}.gallery-grid{grid-template-columns:1fr}.gallery-card,.wide,.tall,.small,.medium{grid-column:auto;min-height:270px}.menu-row{grid-template-columns:1fr}.reserve-fixed{left:18px;right:18px;display:none}.lead,.copy p{font-size:12px;line-height:2}h1{font-size:clamp(56px,17vw,96px)}h2{font-size:clamp(42px,14vw,78px)}
-      .hero{min-height:100svh;padding:102px 20px 118px;align-items:center}
-      .hero-layout{grid-template-columns:1fr;gap:26px}
+      .mobile-contact-bar{position:fixed;left:14px;right:14px;bottom:14px;z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px;border-radius:999px;background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.86);box-shadow:0 18px 60px rgba(70,80,88,.24);backdrop-filter:blur(20px) saturate(160%)}
+      .mobile-contact-bar a{background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.72);color:#273035;min-height:48px;padding:0}
+      .mobile-contact-bar a:last-child{background:rgba(203,181,125,.28)}
+      .section{padding:86px 20px}
+      .hero{padding:96px 20px 116px;align-items:center}
+      .hero-grid,.split,.conversion-strip .section-inner{grid-template-columns:1fr}
       .hero h1{font-size:clamp(48px,17vw,82px)}
       .hero h1 span{font-size:clamp(18px,6vw,28px);margin-top:14px}
-      .hero .lead{margin-top:22px;font-size:12px;line-height:2}
-      .hero-actions{margin-top:26px}
-      .hero-actions .btn{width:100%;min-width:0}
-      .hero-proof{grid-template-columns:1fr;gap:8px;margin-top:22px}
+      .lead{font-size:12px;line-height:2}
+      .hero-actions .btn{width:100%}
+      .hero-proof{grid-template-columns:1fr;gap:8px}
       .proof-chip{min-height:auto;padding:13px 14px}
-      .hero-panel{min-height:260px;border-radius:26px}
-      .hero-panel-content{padding:16px;border-radius:18px}
+      .treatment-card,.treatment-card img{min-height:315px}
+      .micro-gallery{display:none}
       .hero-scroll{display:none}
+      .feature-grid,.flow-grid,.faq-grid{grid-template-columns:1fr}
+      .photo-mosaic{grid-template-columns:1fr;grid-template-rows:320px 230px 230px}
+      .photo-mosaic figure:first-child,.photo-mosaic figure:nth-child(3){grid-row:auto;grid-column:auto}
+      .menu-row{grid-template-columns:1fr}
+      .price{font-size:26px}
     }
   </style>
 </head>
@@ -121,18 +182,18 @@
     </div>
   </nav>
 
-  <main class="site" id="top">
-    <section class="section hero dark">
+  <main id="top">
+    <section class="hero">
       <div class="hero-bg"></div>
-      <div class="hero-layout hero-layout-clean">
-        <div class="hero-copy reveal">
+      <div class="hero-grid">
+        <div class="reveal">
           <div class="hero-kicker">Ebisu Private Body Salon</div>
           <h1>TAKUMA<span>身体を読み、本来の動きを取り戻す。</span></h1>
           <p class="lead">恵比寿の完全予約制整体サロン。筋肉・可動域・重心・姿勢を丁寧に観察し、その日の身体に合わせて施術を組み立てます。静かな個室で、癒しに寄せすぎない上質なボディメンテナンスを。</p>
           <div class="hero-actions">
-            <a class="btn" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
-            <a class="btn ghost" href="tel:09088659214">Call</a>
-            <a class="btn ghost" href="#concept">View Concept</a>
+            <a class="btn primary" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
+            <a class="btn gold" href="tel:09088659214">Call</a>
+            <a class="btn" href="#technique">Technique</a>
           </div>
           <div class="hero-proof" aria-label="salon features">
             <div class="proof-chip"><strong>Private</strong><span>完全予約制の個別空間</span></div>
@@ -140,96 +201,131 @@
             <div class="proof-chip"><strong>Custom</strong><span>状態に合わせた施術設計</span></div>
           </div>
         </div>
-        <div class="hero-panel reveal delay-1" aria-label="private treatment room">
-          <div class="hero-panel-content">
-            <strong>Ebisu / 5min</strong>
-            <p>東京都渋谷区恵比寿4丁目。JR恵比寿駅徒歩5分。月から土曜午後、日曜日対応。</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-layout">
-        <div class="hero-copy reveal">
-          <div class="hero-kicker">Ebisu Private Body Salon</div>
-          <h1>TAKUMA<span>身体を読み、本来の動きを取り戻す。</span></h1>
-          <p class="lead">恵比寿の完全予約制整体サロン。筋肉・可動域・重心・姿勢を丁寧に観察し、その日の身体に合わせて施術を組み立てます。静かな個室で、癒しに寄せすぎない上質なボディメンテナンスを。</p>
-          <div class="hero-actions">
-            <a class="btn" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
-            <a class="btn ghost" href="tel:09088659214">Call</a>
-            <a class="btn ghost" href="#concept">View Concept</a>
-          </div>
-          <div class="hero-proof" aria-label="salon features">
-            <div class="proof-chip"><strong>Private</strong><span>完全予約制の個別空間</span></div>
-            <div class="proof-chip"><strong>Observe</strong><span>姿勢・癖・動作を確認</span></div>
-            <div class="proof-chip"><strong>Custom</strong><span>状態に合わせた施術設計</span></div>
-          </div>
-        </div>
-        <div class="hero-panel reveal delay-1" aria-label="private treatment room">
-          <div class="hero-panel-content">
-            <strong>Ebisu / 5min</strong>
-            <p>東京都渋谷区恵比寿4丁目。JR恵比寿駅徒歩5分。月から土曜午後、日曜日対応。</p>
+        <div class="hero-visual reveal">
+          <figure class="treatment-card">
+            <img src="img/optimized/treatment-1.jpg" alt="TAKUMAの施術風景" width="900" height="1588" />
+            <figcaption class="hero-note">
+              <strong>First Consultation</strong>
+              <p>初回は身体チェックから。痛みの場所だけでなく、動き方・重心・姿勢の癖を見て施術を組み立てます。</p>
+            </figcaption>
+          </figure>
+          <div class="micro-gallery" aria-label="treatment details">
+            <figure><img src="img/optimized/treatment-2.jpg" alt="施術中の身体確認" width="900" height="1591" /></figure>
+            <figure><img src="img/optimized/treatment-3.jpg" alt="可動域を確認する施術" width="900" height="1588" /></figure>
           </div>
         </div>
       </div>
       <div class="hero-scroll">Scroll</div>
-      <div class="hero-copy reveal">
-        <div class="eyebrow">Ebisu Private Body Salon</div>
-        <h1>TAKUMA<br>Body<br>Care</h1>
-        <p class="lead">恵比寿の静けさに包まれる、会員制のようなボディメンテナンス体験。整える時間を、上質な空間へ。</p>
-        <div class="actions"><a class="btn" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a><a class="btn ghost" href="#concept">View Concept</a></div>
-      </div>
-      <div class="divider-glass"></div>
     </section>
 
-    <section class="section concept light" id="concept">
-      <div class="concept-bg"></div><div class="material-orbit"></div>
-      <div class="grid-2">
-        <div class="glass-card reveal"><div class="copy"><div class="eyebrow">Concept</div><h2>Not therapy.<br>Maintenance.</h2><p>整体の生活感を削ぎ落とし、ホテルスパの静けさとクリニックの清潔感へ。写真はそのまま見せず、光・余白・ガラスの層で上質に包みます。</p></div></div>
-        <div class="salon-mosaic reveal delay-1">
-          <figure class="salon-shot"><img src="img/S__204398630_0.jpg" alt="private treatment room"></figure>
-          <figure class="salon-shot"><img src="img/S__204398639_0.jpg" alt="treatment bed detail"></figure>
-          <figure class="salon-shot"><img src="img/S__204398641_0.jpg" alt="salon room view"></figure>
-          <figure class="salon-shot"><img src="img/S__204398642_0.jpg" alt="salon flowers"></figure>
+    <section class="conversion-strip">
+      <div class="section-inner">
+        <div>
+          <strong>迷っている方へ</strong>
+          <p>空き状況・身体の悩み・施術時間の相談はLINEで受付。施術中は電話に出られない場合があります。</p>
+        </div>
+        <a class="btn primary" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINEで相談する</a>
+      </div>
+    </section>
+
+    <section class="section concept" id="concept">
+      <div class="section-inner split">
+        <div class="copy-block reveal">
+          <div class="eyebrow">Concept</div>
+          <h2>整えるより、読み解く。</h2>
+          <p>ただ揉む、ただ伸ばす、ではなく、身体がどう動き、どこで止まり、どこに負担が集まっているかを観察します。静かな空間で、身体理解に基づいたオーダーメイド施術を。</p>
+          <div class="feature-grid">
+            <div class="feature glass"><span>01</span><h3>観察</h3><p>姿勢、重心、可動域、日常の癖を確認。</p></div>
+            <div class="feature glass"><span>02</span><h3>設計</h3><p>その日の状態に合わせて施術内容を調整。</p></div>
+            <div class="feature glass"><span>03</span><h3>維持</h3><p>戻りにくい身体づくりまで考えます。</p></div>
+          </div>
+        </div>
+        <div class="photo-mosaic reveal">
+          <figure><img src="img/optimized/room-main.jpg" alt="完全予約制の個室空間" width="675" height="900" loading="lazy" /></figure>
+          <figure><img src="img/optimized/room-detail-3.jpg" alt="施術ベッド" width="675" height="900" loading="lazy" /></figure>
+          <figure><img src="img/optimized/room-hero.jpg" alt="恵比寿の整体サロン内観" width="675" height="900" loading="lazy" /></figure>
         </div>
       </div>
-      <div class="divider-glass"></div>
     </section>
 
-    <section class="section technique dark" id="technique">
-      <div class="technique-bg"></div>
-      <div class="grid-2">
-        <div class="copy reveal"><div class="eyebrow">Technique</div><h2>Precision<br>for the body.</h2><p>強く押すことではなく、身体の反応を読みながら整えること。肩、腰、姿勢、巡り。必要な施術だけを静かに積み重ねます。</p></div>
-        <div class="glass-card reveal delay-1" style="background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.26)"><div class="copy"><div class="float-list"><div class="float-item"><span>Posture</span><span>01</span></div><div class="float-item"><span>Shoulder</span><span>02</span></div><div class="float-item"><span>Lower Back</span><span>03</span></div><div class="float-item"><span>Recovery</span><span>04</span></div></div></div></div>
+    <section class="section dark-section" id="technique">
+      <div class="section-inner split">
+        <div class="copy-block reveal">
+          <div class="eyebrow">Technique</div>
+          <h2>不調の場所だけを、見ない。</h2>
+          <p>肩こり、首の重さ、腰の違和感、姿勢の崩れ。原因は痛い場所だけにあるとは限りません。筋肉・関節・重心のつながりから、必要な施術を静かに積み重ねます。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reserve</a>
+            <a class="btn" href="#flow">Flow</a>
+          </div>
+        </div>
+        <div class="method-list reveal">
+          <div class="method"><b>01</b><div><strong>Posture Reading</strong><p>立ち方、座り方、肩や骨盤の傾きから負担の流れを見ます。</p></div></div>
+          <div class="method"><b>02</b><div><strong>Range Check</strong><p>首、肩、背中、股関節などの動きを確認し、可動域の制限を探します。</p></div></div>
+          <div class="method"><b>03</b><div><strong>Custom Treatment</strong><p>強さや手順を固定せず、当日の身体に合わせて調整します。</p></div></div>
+          <div class="method"><b>04</b><div><strong>After Care</strong><p>施術後の変化と、日常で意識したいポイントを共有します。</p></div></div>
+        </div>
       </div>
-      <div class="divider-glass"></div>
     </section>
 
-    <section class="section room dark" id="room">
-      <div class="room-bg"></div>
-      <div class="room-copy reveal"><div class="eyebrow">Private Room</div><h2>Silent<br>space.</h2><p class="lead">実際の店内写真は、暗部を締めて彩度を落とし、背景として使うことで“普通の整体感”を抑えています。</p></div>
-      <div class="divider-glass"></div>
-    </section>
-
-    <section class="section gallery light" id="gallery">
-      <div class="gallery-bg"></div>
-      <div class="copy reveal"><div class="eyebrow">Room Gallery</div><h2>Real room,<br>refined.</h2><p>店内写真は小さなカードではなく、余白を埋めるビジュアルレイヤーとして配置。白い霧と水面反射で素材感を統一します。</p></div>
-      <div class="gallery-grid reveal delay-1">
-        <figure class="gallery-card wide"><img src="img/S__204398641_0.jpg" alt="room wide"></figure>
-        <figure class="gallery-card tall"><img src="img/S__204398632_0.jpg" alt="bed and wall"></figure>
-        <figure class="gallery-card small"><img src="img/S__204398640_0.jpg" alt="desk"></figure>
-        <figure class="gallery-card medium"><img src="img/S__204398631_0.jpg" alt="treatment room"></figure>
+    <section class="section menu" id="menu">
+      <div class="section-inner">
+        <div class="menu-card glass reveal">
+          <div class="eyebrow">Menu</div>
+          <h2>Order Made Session</h2>
+          <div class="menu-row"><div><strong>Body Conditioning</strong><span>首・肩・腰など、日常の疲労や違和感を整える基本メンテナンス。</span></div><div class="price">60min</div></div>
+          <div class="menu-row"><div><strong>Movement Adjustment</strong><span>姿勢、可動域、重心の崩れを丁寧に見ながら整える集中セッション。</span></div><div class="price">90min</div></div>
+          <div class="menu-row"><div><strong>Full Balance Session</strong><span>全身の状態を観察し、必要な施術を組み立てる上位メンテナンス。</span></div><div class="price">120min</div></div>
+          <p style="margin-top:24px">症状や目的に合わせて内容を調整します。料金・空き状況はLINEよりお問い合わせください。</p>
+        </div>
       </div>
-      <div class="divider-glass"></div>
     </section>
 
-    <section class="section menu light" id="menu">
-      <div class="menu-bg"></div>
-      <div class="menu-panel panel reveal"><div class="eyebrow">Menu</div><h2>Body Care</h2><div class="menu-row"><div><strong>Essential Maintenance</strong><span>首・肩・腰を中心に、日常疲労を整える基本コース。</span></div><div class="price">60min</div></div><div class="menu-row"><div><strong>Deep Conditioning</strong><span>身体の重さや姿勢の崩れを丁寧に整える集中コース。</span></div><div class="price">90min</div></div><div class="menu-row"><div><strong>Signature Treatment</strong><span>全身の状態を見ながら組み立てる上位メンテナンス。</span></div><div class="price">120min</div></div></div>
-      <div class="divider-glass"></div>
+    <section class="section" id="flow">
+      <div class="section-inner reveal">
+        <div class="eyebrow">Flow</div>
+        <h2>はじめてでも、静かに進む。</h2>
+        <div class="flow-grid">
+          <div class="flow-card glass"><b>01</b><strong>LINE予約</strong><p>希望日時と身体の悩みを送ってください。</p></div>
+          <div class="flow-card glass"><b>02</b><strong>カウンセリング</strong><p>不調、生活習慣、目的を確認します。</p></div>
+          <div class="flow-card glass"><b>03</b><strong>身体チェック</strong><p>姿勢・動作・可動域を見て施術を設計。</p></div>
+          <div class="flow-card glass"><b>04</b><strong>施術とケア</strong><p>施術後の変化とセルフケアを共有します。</p></div>
+        </div>
+      </div>
     </section>
 
-    <section class="section reserve light" id="reserve">
-      <div class="reserve-bg"></div>
-      <div class="reserve-inner panel reveal"><div class="eyebrow">Reservation</div><h2>Reserve<br>your quiet.</h2><p class="lead">ご予約・お問い合わせはLINE、お電話、Instagramより承ります。施術中はお電話に出られない場合がございます。</p><div class="actions" style="justify-content:center"><a class="btn" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reservation</a><a class="btn" href="tel:09088659214">Call</a><a class="btn" href="https://www.instagram.com/takuma___asuka__?igsh=MXc1eHcybHN4cGJsdw%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a></div><div class="access-note"><p><strong>TAKUMA -仮-</strong></p><p>東京都渋谷区恵比寿4丁目</p><p>JR恵比寿駅 徒歩5分 / 東京メトロ日比谷線 恵比寿駅 徒歩8分</p><p>TEL 090-8865-9214 / 月〜土午後・日曜日</p><p><a href="https://share.google/ywy78vYIDyG5Wlp89" target="_blank" rel="noopener">Google Map</a></p></div></div>
+    <section class="section">
+      <div class="section-inner reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2>予約前の不安を、先に少なく。</h2>
+        <div class="faq-grid">
+          <div class="faq-card glass"><strong>強い施術ですか？</strong><p>状態に合わせて調整します。強さだけに頼る施術ではありません。</p></div>
+          <div class="faq-card glass"><strong>服装は？</strong><p>動きやすい服装がおすすめです。詳細は予約時にご案内します。</p></div>
+          <div class="faq-card glass"><strong>男性も予約できますか？</strong><p>完全予約制で個別に対応します。まずはLINEでご相談ください。</p></div>
+          <div class="faq-card glass"><strong>当日予約は？</strong><p>空きがあれば対応可能です。最新状況はLINEが確実です。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reserve" id="reserve">
+      <div class="section-inner">
+        <div class="reserve-panel glass reveal">
+          <div class="eyebrow">Reservation</div>
+          <h2>身体を整える時間を、予約する。</h2>
+          <p class="lead-dark">ご予約・お問い合わせはLINE、お電話、Instagramより承ります。施術中は電話に出られない場合があるため、LINEがもっとも確実です。</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn dark" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINE Reservation</a>
+            <a class="btn" href="tel:09088659214">Call</a>
+            <a class="btn" href="https://www.instagram.com/takuma___asuka__/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+          <div class="access-note">
+            <p><strong>TAKUMA-仮-</strong></p>
+            <p>東京都渋谷区恵比寿4丁目</p>
+            <p>JR恵比寿駅 徒歩5分 / 日比谷線恵比寿駅 徒歩8分</p>
+            <p>TEL 090-8865-9214 / 月〜土午後・日曜日対応</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -238,16 +334,12 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
           entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
         }
       });
-    }, { threshold: .18 });
-
-    reveals.forEach((el) => {
-      el.style.animationPlayState = 'paused';
-      io.observe(el);
-    });
+    }, { threshold: .16 });
+    reveals.forEach((el) => io.observe(el));
   </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿# 引継ぎ資料｜TAKUMA-仮-
+﻿# 引継ぎ資料｜ALIGNMENT BODY
 
 ## 現在の状況
 
@@ -200,6 +200,9 @@ img/ には以下を入れる。
 表示用の軽量画像は img/optimized/ を使用する。
 元画像は img/ に残し、サイト表示では optimized 配下を優先参照する。
 
+ロゴ原本は img/logo-alignment-body.jpg に保管。
+サイト表示では img/optimized/logo-alignment-body.jpg を使用する。
+
 ---
 
 ## 主に編集すべきファイル
@@ -216,6 +219,9 @@ img/ には以下を入れる。
 
 ## 直近の変更履歴
 
+- 新ロゴを反映し、表示ブランド名を ALIGNMENT BODY に更新
+- ヒーローと予約セクションにロゴを配置
+- ロゴ画像を軽量化し、img/optimized/logo-alignment-body.jpg として追加
 - 売上改善を目的に、LP全体を予約導線重視へ再構成
 - TOPに施術写真を追加し、初見で整体サロンと分かる構成へ変更
 - 表示用軽量画像を img/optimized/ に作成
@@ -229,7 +235,7 @@ img/ には以下を入れる。
 - スマホ下部のTEL/LINE固定追従メニューを維持
 - ヒーロー背景に白銀素材、水面反射、光ライン演出を追加
 - 店舗写真をガラスUIパネル内に配置
-- 店舗名を TAKUMA-仮- に設定
+- 店舗名を ALIGNMENT BODY に更新
 - LINE予約リンク追加
 - TEL追加
 - Instagram追加

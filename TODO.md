@@ -1,4 +1,4 @@
-﻿# TODO｜TAKUMA-仮-
+﻿# TODO｜ALIGNMENT BODY
 
 # 最優先
 
@@ -13,6 +13,8 @@
 
 # デザイン
 
+- [x] 新ロゴ反映
+- [x] ブランド名を ALIGNMENT BODY に更新
 - [x] 奥行き追加
 - [x] ブラー演出
 - [x] シャドウ最適化

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="恵比寿駅徒歩5分の完全予約制整体サロン TAKUMA-仮-。筋肉・可動域・重心・姿勢を観察し、その日の身体に合わせたオーダーメイド施術を行います。" />
-  <title>TAKUMA-仮-｜恵比寿の完全予約制整体サロン</title>
+  <meta name="description" content="恵比寿駅徒歩5分の完全予約制整体サロン ALIGNMENT BODY。筋肉・可動域・重心・姿勢を観察し、その日の身体に合わせたオーダーメイド施術を行います。" />
+  <title>ALIGNMENT BODY｜恵比寿の完全予約制整体サロン</title>
   <link rel="preload" as="image" href="img/optimized/hero-bg.jpg" />
   <link rel="preload" as="image" href="img/optimized/treatment-1.jpg" />
+  <link rel="preload" as="image" href="img/optimized/logo-alignment-body.jpg" />
   <style>
     :root{
       --ink:#20272c;
@@ -32,6 +33,7 @@
     .noise{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.025;background-image:radial-gradient(rgba(0,0,0,.28) .7px,transparent .7px);background-size:3px 3px}
     .nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;color:rgba(255,255,255,.86);font:11px/1 var(--font-sans);letter-spacing:.18em;text-transform:uppercase;mix-blend-mode:difference}
     .nav a{text-decoration:none}.nav-links{display:flex;gap:24px}
+    .nav-brand{font-weight:600;letter-spacing:.22em}
     .fixed-contact{position:fixed;right:18px;bottom:18px;z-index:80;display:grid;gap:10px;width:min(230px,calc(100vw - 36px))}
     .fixed-contact a,.mobile-contact-bar a,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;text-decoration:none;font:12px/1 var(--font-sans);letter-spacing:.15em;text-transform:uppercase;transition:transform .35s ease,box-shadow .35s ease,background .35s ease}
     .fixed-contact a{background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.84);box-shadow:0 18px 55px rgba(70,80,88,.22);backdrop-filter:blur(18px) saturate(150%)}
@@ -64,8 +66,11 @@
     @keyframes softPulse{0%,100%{box-shadow:0 18px 55px rgba(36,44,50,.18)}50%{box-shadow:0 24px 72px rgba(203,181,125,.24)}}
     @keyframes lineGlow{from{opacity:.45;transform:translateX(-12%)}to{opacity:.85;transform:translateX(12%)}}
     .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(310px,.62fr);gap:min(7vw,76px);align-items:end;width:min(1180px,100%);margin:auto}
+    .hero-logo{width:min(330px,76vw);margin:0 0 24px;padding:14px 16px;border-radius:24px;background:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.9);box-shadow:0 28px 90px rgba(0,0,0,.24);backdrop-filter:blur(18px) saturate(150%)}
+    .hero-logo img{width:100%;height:auto}
     .hero-kicker{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;color:rgba(255,255,255,.78);font:11px/1 var(--font-sans);letter-spacing:.24em;text-transform:uppercase}
     .hero-kicker:before{content:"";width:42px;height:1px;background:rgba(203,181,125,.78);box-shadow:0 0 20px rgba(203,181,125,.48)}
+    .hero h1 .brand-name{margin-top:0;font-family:var(--font-sans);font-size:clamp(38px,7.8vw,96px);line-height:1.02;letter-spacing:.13em;font-weight:700;color:rgba(255,255,255,.94)}
     .hero h1 span{display:block;margin-top:18px;font-size:clamp(19px,4.6vw,43px);line-height:1.22;letter-spacing:.04em;color:rgba(255,255,255,.88)}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
     .hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px;max-width:650px}
@@ -137,6 +142,8 @@
     .reserve{min-height:86svh;text-align:center;display:grid;align-items:center;background:#f7f8f8}
     .reserve:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.5)),url("img/optimized/material.jpg") center/cover no-repeat;opacity:.92}
     .reserve-panel{width:min(920px,100%);margin:auto;padding:clamp(34px,6vw,70px);border-radius:36px}
+    .reserve-logo{width:min(300px,74vw);margin:0 auto 24px;padding:12px 14px;border-radius:22px;background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.86);box-shadow:0 18px 56px rgba(70,80,88,.14)}
+    .reserve-logo img{width:100%;height:auto}
     .reserve-panel .lead-dark{margin:26px auto 0;max-width:640px;color:rgba(32,39,44,.68)}
     .access-note{margin-top:34px;font:12px/2 var(--font-sans);letter-spacing:.08em;color:rgba(32,39,44,.66)}
     .access-note a{text-decoration:none;border-bottom:1px solid rgba(32,39,44,.3)}
@@ -153,7 +160,9 @@
       .section{padding:86px 20px}
       .hero{padding:96px 20px 116px;align-items:center}
       .hero-grid,.split,.conversion-strip .section-inner{grid-template-columns:1fr}
+      .hero-logo{width:min(290px,82vw);margin-bottom:20px;border-radius:20px}
       .hero h1{font-size:clamp(48px,17vw,82px)}
+      .hero h1 .brand-name{font-size:clamp(31px,10.5vw,56px);letter-spacing:.08em}
       .hero h1 span{font-size:clamp(18px,6vw,28px);margin-top:14px}
       .lead{font-size:12px;line-height:2}
       .hero-actions .btn{width:100%}
@@ -187,7 +196,7 @@
   </div>
 
   <nav class="nav">
-    <a href="#top">TAKUMA</a>
+    <a class="nav-brand" href="#top">ALIGNMENT BODY</a>
     <div class="nav-links">
       <a href="#concept">コンセプト</a>
       <a href="#technique">施術について</a>
@@ -201,8 +210,11 @@
       <div class="hero-bg"></div>
       <div class="hero-grid">
         <div class="reveal">
+          <div class="hero-logo">
+            <img src="img/optimized/logo-alignment-body.jpg" alt="ALIGNMENT BODY 3つの軸で、整える" width="760" height="660" />
+          </div>
           <div class="hero-kicker">恵比寿・完全予約制整体サロン</div>
-          <h1>TAKUMA<span>不調の原因を見極め、これからの生活が変わる身体へ。</span></h1>
+          <h1><span class="brand-name">ALIGNMENT BODY</span><span>不調の原因を見極め、これからの生活が変わる身体へ。</span></h1>
           <p class="lead">日常の中で感じる身体の違和感や、これまでなかなか変わらなかった不調に向き合います。骨格や筋肉の付き方が一人ひとり違うように、必要な施術も一人ひとり違います。丁寧なカウンセリングと身体チェックをもとに、より快適に過ごせる身体へ整えます。</p>
           <div class="hero-actions">
             <a class="btn primary" href="https://lin.ee/nOCjC5u" target="_blank" rel="noopener">LINEで予約する</a>
@@ -217,7 +229,7 @@
         </div>
         <div class="hero-visual reveal">
           <figure class="treatment-card">
-            <img src="img/optimized/treatment-1.jpg" alt="TAKUMAの施術風景" width="900" height="1588" />
+            <img src="img/optimized/treatment-1.jpg" alt="ALIGNMENT BODYの施術風景" width="900" height="1588" />
             <figcaption class="hero-note">
               <strong>初回カウンセリング</strong>
               <p>初回は必ずカウンセリングを行います。痛みや違和感のある場所だけでなく、姿勢、動き方、筋肉の状態を見て施術します。</p>
@@ -324,6 +336,9 @@
     <section class="section reserve" id="reserve">
       <div class="section-inner">
         <div class="reserve-panel glass reveal">
+          <div class="reserve-logo">
+            <img src="img/optimized/logo-alignment-body.jpg" alt="ALIGNMENT BODY Tokyo Ebisu" width="760" height="660" />
+          </div>
           <div class="eyebrow">ご予約</div>
           <h2>ご予約はこちらから</h2>
           <p class="lead-dark">ご予約・お問い合わせはLINE、お電話、Instagramより承ります。施術中は電話に出られない場合があるため、LINEでのご連絡がおすすめです。</p>
@@ -333,7 +348,7 @@
             <a class="btn" href="https://www.instagram.com/takuma___asuka__/" target="_blank" rel="noopener">Instagram</a>
           </div>
           <div class="access-note">
-            <p><strong>TAKUMA-仮-</strong></p>
+            <p><strong>ALIGNMENT BODY</strong></p>
             <p>東京都渋谷区恵比寿4丁目</p>
             <p>JR恵比寿駅 徒歩5分 / 日比谷線恵比寿駅 徒歩8分</p>
             <p>TEL 090-8865-9214 / 月〜土午後・日曜日対応</p>
